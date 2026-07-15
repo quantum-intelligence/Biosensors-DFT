@@ -1,0 +1,19 @@
+coords-type Cartesian
+include relax.ionpos
+include relax.lattice
+
+elec-cutoff 20 100
+ion-species GBRV/$ID_pbe.uspp
+
+elec-ex-corr gga-PBE
+van-der-waals D3
+
+kpoint-folding 3 3 1
+
+elec-smearing Gauss 0.001
+electronic-SCF energyDiffThreshold 1E-7
+ionic-minimize nIterations 100
+
+dump-name relax.$VAR
+dump Ionic Lattice IonicPositions Ecomponents
+

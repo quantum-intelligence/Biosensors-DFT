@@ -1,0 +1,29 @@
+coords-type Cartesian
+include relax.ionpos
+include relax.lattice
+
+elec-cutoff 20 100
+ion-species GBRV/$ID_pbe.uspp
+
+elec-ex-corr gga-PBE
+van-der-waals D3
+
+kpoint-folding 6 6 1
+
+elec-smearing Fermi 0.001
+electronic-SCF energyDiffThreshold 1E-7
+
+elec-n-bands 800
+
+density-of-states Total\
+                  Orbital Mo 0 d \
+                  Orbital S  0 p \
+                  Orbital C  0 p \
+                  Orbital N  0 p \
+                  Orbital O  0 p \
+                  Orbital H  0 s \
+                  Esigma 0.002
+
+dump-name analyze.$VAR
+dump End ElecDensity Ecomponents EigStats Fillings Dtot
+
