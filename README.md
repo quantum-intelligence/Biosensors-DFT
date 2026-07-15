@@ -86,5 +86,4 @@ fluid-solvent H2O
 > \*\*Units Note:\*\* In JDFTx, all lengths are reported in \*\*Bohr\*\* and all energy components are in \*\*Rydbergs\*\*.
 
 \---
-   ```
 
