@@ -59,13 +59,6 @@ Extracted using the following block in the input file (using a smearing of $0.00
 
 \---
 
-## Outputs and Data Extraction
-
-We extracted the electrostatic potential, charge density, and key energy metrics using the following command:
-
-```jdftx
-dump End ElecDensity Ecomponents EigStats Fillings Dtot
-```
 #### Solvation Calculation (Implicit Solvent)
 To study the solvent effects on the adsorption system, implicit solvation calculations are performed. The computational setup remains identical to the vacuum SCF calculation, with the addition of the following fluid commands to model an aqueous environment:
 ```jdftx
@@ -73,8 +66,13 @@ fluid LinearPCM
 pcm-variant CANDLE 
 fluid-solvent H2O
 ```
+## Outputs and Data Extraction
 
+We extracted the electrostatic potential, charge density, and key energy metrics using the following command:
 
+```jdftx
+dump End ElecDensity Ecomponents EigStats Fillings Dtot
+```
 ### Output File Descriptions
 
 * **`ElecDensity`**: Contains the electron density distribution.
